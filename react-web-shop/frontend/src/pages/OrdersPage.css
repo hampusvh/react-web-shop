@@ -1,0 +1,21 @@
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.order-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-items {
+  margin: 0.5rem 0;
+}
+
+.order-item {
+  padding-left: 1rem;
+}

@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff6d8;
+}
+
+.app-wrapper {
+  text-align: center;
+  margin: 0 auto;
+}
