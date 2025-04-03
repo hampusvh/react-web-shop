@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import "./Navbar.css";
@@ -11,14 +11,42 @@ function Navbar() {
   return (
     <nav>
       <div className="main-links">
-        <Link to="/">Startsida</Link>
-        <Link to="/products">Produkter</Link>
-        <Link to="/cart">Varukorg</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Startsida
+        </NavLink>
+        <NavLink
+          to="/products"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Produkter
+        </NavLink>
+        <NavLink
+          to="/cart"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Varukorg
+        </NavLink>
       </div>
       <div className="auth-links">
         {isLoggedIn ? (
           <>
-            <Link to="/profile">Mitt konto</Link>
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Mitt konto
+            </NavLink>
             <span
               onClick={() => {
                 logout();
@@ -31,8 +59,22 @@ function Navbar() {
           </>
         ) : (
           <>
-            <Link to="/register">Registrera</Link>
-            <Link to="/login">Logga in</Link>{" "}
+            <NavLink
+              to="/register"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Registrera
+            </NavLink>
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Logga in
+            </NavLink>{" "}
           </>
         )}
       </div>

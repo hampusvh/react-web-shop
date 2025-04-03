@@ -6,12 +6,16 @@ nav {
   padding: 18px;
 }
 
-nav a {
+.nav-link {
   color: white;
   text-decoration: none;
 }
 
-nav a:hover {
+.nav-link:hover {
+  color: rgb(99, 206, 255);
+}
+
+.nav-link.active {
   color: rgb(99, 206, 255);
 }
 
