@@ -22,7 +22,7 @@ function HomePage() {
 
   return (
     <div className="home">
-      <h2>Välkommen till webbshoppen</h2>
+      <h2>Välkommna till webbshoppen</h2>
       <div className="search-wrapper">
         <input
           className="search-input"
