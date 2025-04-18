@@ -8,10 +8,19 @@
 .search-input {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid rebeccapurple;
-  border-radius: 4px;
+  border: 2px solid var(--accent-color);
+  border-radius: var(--radius);
   font-size: 1rem;
   margin-top: 50px;
+  font-family: var(--font-main);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
 }
 
 .search-results {
@@ -19,11 +28,11 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-shadow);
   border-top: none;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 2px 5px var(--card-shadow);
   z-index: 10;
 }
 
@@ -38,6 +47,11 @@
 
 .search-item a {
   text-decoration: none;
-  color: rebeccapurple;
+  color: var(--accent-color);
   font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.search-item a:hover {
+  color: var(--primary-color);
 }

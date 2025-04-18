@@ -1,10 +1,16 @@
 .product-details {
   max-width: 600px;
-  margin: auto;
-  margin-top: 50px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  padding: 2rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 4px 10px var(--card-shadow);
+  font-family: var(--font-main);
+  transition: box-shadow 0.3s ease;
+}
+
+.product-details:hover {
+  box-shadow: 0 6px 20px var(--card-shadow);
 }

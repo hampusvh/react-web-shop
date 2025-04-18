@@ -1,23 +1,25 @@
 .checkout-content-wrapper {
   min-height: 200px;
   width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-color: #fff2cc;
-  border: 1px solid #ddd;
+  margin: 50px auto;
+  background-color: var(--card-bg);
+  border: 1px solid transparent;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  color: var(--text-color);
 }
 
 .checkout-items {
-  background-color: rgba(255, 255, 255, 0.434);
+  background-color: #2f2f2f;
   width: 50%;
-  border-radius: 15px;
+  border-radius: var(--radius);
   padding: 1rem;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .checkout-total {
@@ -25,8 +27,8 @@
   text-align: center;
   margin: 1rem 0 0.5rem 0;
   font-size: 1rem;
-  color: #333;
-  border-top: 1px solid rgba(126, 126, 126, 0.3);
+  color: var(--text-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 0.5rem;
 }
 
@@ -36,16 +38,16 @@
 }
 
 .checkout-btn {
-  background-color: #4caf50;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 0.8rem 1.6rem;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: var(--radius);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .checkout-btn:hover {
-  background-color: #45a049;
+  background-color: #179846;
 }
