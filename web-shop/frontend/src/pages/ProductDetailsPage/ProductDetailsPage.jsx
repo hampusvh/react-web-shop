@@ -28,7 +28,9 @@ function ProductDetailsPage() {
       <p>Kategori: {product.category}</p>
       <p>Antal i lager: {product.stock}</p>
       <div>
-        <button onClick={() => navigate("/products")}>Gå tillbaka</button>
+        <button onClick={() => navigate("/products")} className="back-btn">
+          Gå tillbaka
+        </button>
         <button onClick={() => addToCart(product)} className="buy-btn">
           Köp
         </button>

@@ -14,3 +14,18 @@
 .product-details:hover {
   box-shadow: 0 6px 20px var(--card-shadow);
 }
+
+.back-btn {
+  background-color: #2f2f2f;
+  color: var(--text-color);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #3a3a3a;
+}
