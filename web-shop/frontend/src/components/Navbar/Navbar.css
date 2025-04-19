@@ -1,42 +1,34 @@
 nav {
-  background-color: #333;
+  background-color: var(--card-bg);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 18px;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px var(--card-shadow);
+  font-family: var(--font-main);
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: rgb(99, 206, 255);
-}
-
-.nav-link.active {
-  color: rgb(99, 206, 255);
-}
-
-.main-links {
-  display: flex;
-  gap: 1rem;
-}
-
+.main-links,
 .auth-links {
-  margin-left: auto;
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   align-items: center;
 }
 
+.nav-link,
 .logout-link {
-  color: white;
+  color: var(--accent-color);
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
   cursor: pointer;
 }
 
+.nav-link:hover,
 .logout-link:hover {
-  color: red;
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
 }
