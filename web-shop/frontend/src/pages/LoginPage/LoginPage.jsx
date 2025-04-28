@@ -14,7 +14,7 @@ function LoginPage() {
 
   const handleLogin = async () => {
     try {
-      const data = await loginUser(username, password); // ← nytt anrop
+      const data = await loginUser(username, password);
       login(data.token);
       alert("Inloggning lyckades!");
       navigate("/");
