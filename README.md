@@ -1,63 +1,64 @@
-# React Webshop
+## Topstyle - React Webshop
 
-Det här projektet är en enkel webbshop byggd med **React** som frontend och **Node.js**, **Express** samt **MongoDB** i backend.
+I det här projektet har jag byggt en enkel webbshop med React som frontend och Node.js + Express + MongoDB i backend.
 
-Jag började med att skapa en navbar och använda React Router för navigering mellan sidor. Därefter skapades en databas i MongoDB, och testprodukter lades in för att visas i webbshopen.
+Jag började med att skapa en navbar och använda React Router för navigering mellan sidor. Därefter skapade jag en databas i MongoDB och lade in testprodukter som hämtas och visas i webbshopen.
 
-CRUD-funktionalitet har implementerats för produkterna, tillsammans med ett API för hantering av autentisering, beställningar och användare.
+Jag har implementerat CRUD-funktionalitet för produkterna samt skapat ett API som hanterar autentisering, beställningar och användare.
 
 ## Funktioner
 
-- Skapa konto och logga in
-- Se produkter och produktdetaljer
+- Skapa konto & logga in
+- Se produkter & produktdetaljer
 - Sök efter produkter
-- Lägg till produkter i varukorg
-- Skicka beställning (kräver inloggning)
+- Lägg till i varukorg
+- Skicka beställning (endast inloggad)
 - Se orderhistorik
-- Byta lösenord
+- Byt lösenord
 - Logga ut
 
 ## Säkerhet
 
-- JWT används för att skydda API:et och autentisera användare.  
-- Alla skyddade rutter verifierar JWT-token via middleware.  
-- Lösenord hashas med bcrypt innan de sparas i databasen.  
-- React skyddar mot XSS via automatisk escaping i JSX.  
-- Risken för CSRF minimeras eftersom JWT skickas i headers istället för cookies.
+JWT används för att skydda API:et och autentisera användare. Alla skyddade rutter använder middleware som verifierar token.
+Lösenord hashas med bcrypt innan de sparas i databasen. React skyddar mot XSS genom automatisk escaping i JSX.
+Risken för CSRF är liten eftersom JWT skickas i headers istället för cookies.
 
-## Projektlogg
+## Logg över vad som har gjorts
 
-- Skapade filstrukturen för backend och frontend
-- Installerade nödvändiga npm-paket
-- Skapade och konfigurerade en Express-server (`server.js`)
-- Anslöt backend till MongoDB Atlas med miljövariabler (.env)
-- Testade att servern kördes korrekt på `http://localhost:5001`
-- Skapade en produktmodell (`Product.js`)
-- Lade till testprodukter i databasen
-- Skapade en API-route för att hämta alla produkter (`/api/products`)
-- Fixade MongoDB-anslutningen så att servern kan hämta produkter
-- Implementerade CRUD-funktionalitet i `productRoutes.js`
+- Skapat filstrukturen för backend och frontend
+- Installerat alla nödvändiga npm-paket
+- Skapat och konfigurerat en Express-server (server.js)
+- Kopplat upp backend till MongoDB Atlas med .env
+- Testat att servern körs korrekt på http://localhost:5001
+- Skapat en produktmodell (Product.js)
+- Lagt till testprodukter i databasen
+- Skapat en API-route för att hämta alla produkter (/api/products)
+- Fixat MongoDB-anslutningen så att servern kan hämta produkter
+- Skapat CRUD-funktionalitet i productRoutes.js
 
-- Påbörjade frontend, installerade React Router Dom och skapade pages
-- Konfigurerade CORS så att frontend kan hämta data från backend
+- Påbörjat frontend, installerat React Router Dom. Skapade pages.
+- Fixade CORS så att frontend kan hämta data från backend.
 
-- Implementerade navbar med React Router Dom och Link
-- Byggde `ProductPage` som hämtar produkter från backend
-- Skapade `ProductCard.jsx` för bättre visuell presentation av produkter
+- Implementerat navbar med React Router Dom och Link
+- ProductPage hämtar produkter från backend
+- Skapade ProductCard.jsx för bättre visuell presentation av produkter
 
-- Implementerade varukorg med Context API
-  - Skapade `CartContext.jsx` för att lagra produkter i varukorgen
-  - Lade till `CartProvider` i `App.jsx` för global hantering
-  - Flyttade checkout-länk från navbar till `CartPage`
+Implementering av varukorg med Context API
 
-- Skapade en sökfunktion i `HomePage` som visar produkter baserat på sökord
+- Skapade en Context (CartContext.jsx) för att lagra i varukorgen
+- Lagt till CartProvider i app.jsx. Nu hamnar produkter i varukorgen när man väljer att köpa.
+- Tog bort checkout länken från Navbar och lagt til den i CartPage.
 
-- Skapade `User.js`, `authRoutes.js`, `userRoutes.js` och `authMiddleware.js` för användarhantering
+- Skapade en searchbar och sökfunktionalitet i Homepage som visar produkter om sökordet matchar.
 
-- Utvecklade `LoginPage.jsx` med inputfält för användarnamn och lösenord, kopplat till API:et
-- Utvecklade `RegisterPage.jsx` med liknande struktur som `LoginPage.jsx`
+- Skapade en User.js model, authRoutes.js,userRoutes.js, authMiddleware.js
 
-- Skapade `Order.js` och `orderRoutes.js` för att spara beställningar i backend
-- Kopplade `CheckoutPage` till backend för att spara ordrar för inloggade användare
+- Byggde vidare på LoginPage.jsx med inputfält för användarnamn och lösenord, samt login-knapp. Kopplade detta till API:et.
 
-- Skapade en PUT-route i `userRoutes.js` för lösenordsbyte av inloggade användare
+- Byggde vidare på RegisterPage.jsx på samma sätt som LoginPage.jsx.
+
+- Skapat Order.js & orderRoutes.js för att spara beställningar i backend.
+
+- Kopplade CheckoutPage till backend så att ordrar för inloggade användare sparas.
+
+- Skapade en PUT route i userRoutes.js, och en funktion så att en inloggad användare kan byta lösenord.
