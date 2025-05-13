@@ -22,7 +22,7 @@ function HomePage() {
 
   return (
     <div className="home">
-      <h2>React-Webshop</h2>
+      <h2>R W S</h2>
       <div className="search-wrapper">
         <input
           className="search-input"

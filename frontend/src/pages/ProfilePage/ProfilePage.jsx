@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 import "./ProfilePage.css";
 
 function ProfilePage() {
   const navigate = useNavigate();
+  const { logout } = useContext(AuthContext);
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    logout();
     navigate("/login");
   };
 
