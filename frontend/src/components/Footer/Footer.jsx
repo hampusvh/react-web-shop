@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer>
-      <p>Footer</p>
+      <p>&copy; {new Date().getFullYear()} React Webshop</p>
     </footer>
   );
 }

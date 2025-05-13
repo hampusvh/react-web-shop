@@ -6,7 +6,7 @@ import { loginUser } from "../../services/service";
 
 import "./Login.css";
 
-function LoginPage() {
+function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useContext(AuthContext);
