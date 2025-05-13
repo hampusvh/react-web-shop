@@ -1,4 +1,4 @@
-## Topstyle - React Webshop
+## React Webshop
 
 I det här projektet har jag byggt en enkel webbshop med React som frontend och Node.js + Express + MongoDB i backend.
 
