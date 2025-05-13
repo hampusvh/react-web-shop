@@ -7,11 +7,9 @@ function ChangePasswordPage() {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
-  const { isLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn, token } = useContext(AuthContext);
 
   const handleChangePassword = async () => {
-    const token = localStorage.getItem("token");
-
     try {
       await changePassword(token, currentPassword, newPassword);
       alert("Lösenordet har ändrats!");

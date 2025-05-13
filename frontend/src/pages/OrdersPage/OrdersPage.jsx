@@ -7,9 +7,6 @@ function OrdersPage() {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const token = localStorage.getItem("token");
-      if (!token) return;
-
       try {
         const data = await getOrders(token);
         setOrders(data);
