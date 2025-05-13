@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import "./CheckoutPage.css";
+import "./Checkout.css";
 import CartItem from "../../components/CartItem/CartItem";
 import { submitOrder } from "../../services/service";
 
-function CheckoutPage() {
+function Checkout() {
   const { cart } = useContext(CartContext);
 
   const handleOrder = async () => {
@@ -47,4 +47,4 @@ function CheckoutPage() {
   );
 }
 
-export default CheckoutPage;
+export default Checkout;

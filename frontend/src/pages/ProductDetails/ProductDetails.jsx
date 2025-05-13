@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "./ProductDetailsPage.css";
+import "./ProductDetails.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { getProductById } from "../../services/service";
 
-function ProductDetailsPage() {
+function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const navigate = useNavigate();
@@ -39,4 +39,4 @@ function ProductDetailsPage() {
   );
 }
 
-export default ProductDetailsPage;
+export default ProductDetails;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import "./Home.css";
 import { getProducts } from "../../services/service";
 
-function HomePage() {
+function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [products, setProducts] = useState([]);
 
@@ -48,4 +48,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import "./RegisterPage.css";
+import "./Register.css";
 import { registerUser } from "../../services/service";
 
-function RegisterPage() {
+function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -53,4 +53,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default Register;

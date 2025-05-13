@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { getProducts } from "../../services/service";
 
-function ProductPage() {
+function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,4 +23,4 @@ function ProductPage() {
   );
 }
 
-export default ProductPage;
+export default Products;

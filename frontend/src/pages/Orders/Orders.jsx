@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import "./OrdersPage.css";
+import "./Orders.css";
 import { getOrders } from "../../services/service";
 
-function OrdersPage() {
+function Orders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
@@ -55,4 +55,4 @@ function OrdersPage() {
   );
 }
 
-export default OrdersPage;
+export default Orders;

@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import CartItem from "../../components/CartItem/CartItem";
-import "./CartPage.css";
+import "./Cart.css";
 
-function CartPage() {
+function Cart() {
   const { cart, removeFromCart } = useContext(CartContext);
   const navigate = useNavigate();
 
@@ -45,4 +45,4 @@ function CartPage() {
   );
 }
 
-export default CartPage;
+export default Cart;

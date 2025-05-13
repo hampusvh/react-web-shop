@@ -1,9 +1,9 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import "./ChangePasswordPage.css";
+import "./ChangePassword.css";
 import { changePassword } from "../../services/service";
 
-function ChangePasswordPage() {
+function ChangePassword() {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
@@ -45,4 +45,4 @@ function ChangePasswordPage() {
   );
 }
 
-export default ChangePasswordPage;
+export default ChangePassword;
